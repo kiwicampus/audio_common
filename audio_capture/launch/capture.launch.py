@@ -61,6 +61,8 @@ def generate_launch_description():
         package='audio_capture',
         name='audio_capture',
         executable='audio_capture_node',
+        respawn=True,
+        respawn_delay=5,
         namespace=_ns,
         remappings=[
             ('audio', _audio_topic),
